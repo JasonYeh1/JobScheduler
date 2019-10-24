@@ -31,6 +31,8 @@ public class Main {
                 File file = new File("test" + x + ".txt");
                 //test file to test the correctness of the program
                 File test = new File("job.txt");
+                File test1 = new File("job10.txt");
+                File test2 = new File("job15.txt");
 
                 FCFS fcfs = new FCFS();
                 System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
@@ -67,9 +69,9 @@ public class Main {
             fcfsSum10 += fcfsTrials.get(i+1);
             fcfsSum15 += fcfsTrials.get(i+2);
         }
-        System.out.println("FCFS 10 trial average for 5 jobs:  " + fcfsSum5/TRIALS);
-        System.out.println("FCFS 10 trial average for 10 jobs: " + fcfsSum10/TRIALS);
-        System.out.println("FCFS 10 trial average for 15 jobs: " + fcfsSum15/TRIALS);
+        System.out.println("FCFS " + TRIALS + " trial average for 5 jobs:  " + fcfsSum5/TRIALS);
+        System.out.println("FCFS " + TRIALS + " trial average for 10 jobs: " + fcfsSum10/TRIALS);
+        System.out.println("FCFS " + TRIALS + " trial average for 15 jobs: " + fcfsSum15/TRIALS);
 
         System.out.println("");
         double sjfSum5 = 0;
@@ -80,34 +82,34 @@ public class Main {
             sjfSum10 += sjfTrials.get(i+1);
             sjfSum15 += sjfTrials.get(i+2);
         }
-        System.out.println("SJF 10 trial average for 5 jobs:  " + sjfSum5/TRIALS);
-        System.out.println("SJF 10 trial average for 10 jobs: " + sjfSum10/TRIALS);
-        System.out.println("SJF 10 trial average for 15 jobs: " + sjfSum15/TRIALS);
+        System.out.println("SJF " + TRIALS + " trial average for 5 jobs:  " + sjfSum5/TRIALS);
+        System.out.println("SJF " + TRIALS + " trial average for 10 jobs: " + sjfSum10/TRIALS);
+        System.out.println("SJF " + TRIALS + " trial average for 15 jobs: " + sjfSum15/TRIALS);
 
         System.out.println("");
         double rr2Sum5 = 0;
         double rr2Sum10 = 0;
         double rr2Sum15 = 0;
         for(int i = 0; i < sjfTrials.size(); i+=3) {
-            rr2Sum5 += sjfTrials.get(i);
-            rr2Sum10 += sjfTrials.get(i+1);
-            rr2Sum15 += sjfTrials.get(i+2);
+            rr2Sum5 += rr2Trials.get(i);
+            rr2Sum10 += rr2Trials.get(i+1);
+            rr2Sum15 += rr2Trials.get(i+2);
         }
-        System.out.println("RR-2 10 trial average for 5 jobs:  " + rr2Sum5/TRIALS);
-        System.out.println("RR-2 10 trial average for 10 jobs: " + rr2Sum10/TRIALS);
-        System.out.println("RR-2 10 trial average for 15 jobs: " + rr2Sum15/TRIALS);
+        System.out.println("RR-2 " + TRIALS + " trial average for 5 jobs:  " + rr2Sum5/TRIALS);
+        System.out.println("RR-2 " + TRIALS + " trial average for 10 jobs: " + rr2Sum10/TRIALS);
+        System.out.println("RR-2 " + TRIALS + " trial average for 15 jobs: " + rr2Sum15/TRIALS);
 
         System.out.println("");
         double rr5Sum5 = 0;
         double rr5Sum10 = 0;
         double rr5Sum15 = 0;
         for(int i = 0; i < sjfTrials.size(); i+=3) {
-            rr5Sum5 += sjfTrials.get(i);
-            rr5Sum10 += sjfTrials.get(i+1);
-            rr5Sum15 += sjfTrials.get(i+2);
+            rr5Sum5 += rr5Trials.get(i);
+            rr5Sum10 += rr5Trials.get(i+1);
+            rr5Sum15 += rr5Trials.get(i+2);
         }
-        System.out.println("RR-2 10 trial average for 5 jobs:  " + rr5Sum5/TRIALS);
-        System.out.println("RR-2 10 trial average for 10 jobs: " + rr5Sum10/TRIALS);
-        System.out.println("RR-2 10 trial average for 15 jobs: " + rr5Sum15/TRIALS);
+        System.out.println("RR-2 " + TRIALS + " trial average for 5 jobs:  " + rr5Sum5/TRIALS);
+        System.out.println("RR-2 " + TRIALS + " trial average for 10 jobs: " + rr5Sum10/TRIALS);
+        System.out.println("RR-2 " + TRIALS + " trial average for 15 jobs: " + rr5Sum15/TRIALS);
     }
 }
